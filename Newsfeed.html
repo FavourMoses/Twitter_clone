@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newsfeed</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Open+Sans&family=Roboto&display=swap" rel="stylesheet">
+    <link href="Newsfeed.css" rel="stylesheet">
+</head>
+<body>
+  <section class="feeds-page">
+    <nav class="feeds-nav">
+        <div class="icons">
+            <a href="#" class="active"><i class="fas fa-home"><h4 class="icon-text1">Home</h4></i></a>
+            <a href="#" class="active"><i class="fas fa-hashtag"><h4 class="icon-text1">Hashtags</h4></i></a>
+            <a href="#" class="active"><i class="fas fa-bell"><h4 class="icon-text1">Notification</h4></i></a>
+            <a href="#" class="active"><i class="fas fa-envelope"><h4 class="icon-text1">Messages</h4></i></a>
+            <a href="#" class="active"><i class="far fa-user"><h4 class="icon-text1">Profile</h4></i></a>
+            <a href="#" class="active"><i class="fas fa-list"> <h4 class="icon-text1">list</h4></i></a>
+            <a href="#" class="active"><i class="fas fa-search"><h4 class="icon-text1">Explore</h4></i></a>
+            <a href="#" class="active"><i class="fas fa-gear"><h4 class="icon-text1">Settings</h4></i></a>
+        </div>
+        <button class="post-button"><h4>Post</h4></button>
+        <div class="user">
+            <div class="user-image-wrapper">
+                <img src="favy.jpg" alt="" width="40">
+            </div>
+            <a href="#" class="user-link">Phavy <br>@_Favy65</a>
+        </div>
+    </nav>
+
+    <div class="tab">
+        <div class="tab_box">
+            <button class="tab_btn">For You</button>
+            <button class="tab_btn">Following</button>
+            <div class="line"></div>
+        </div>
+        <div class="content_box">
+            <div class="content">
+                <h2>For You</h2>
+                <p class="line">it has always being amazing getting to code</p>
+            </div>
+            <div class="content">
+                <h2>Following</h2>
+                <p class="line">yes even if it can be frustrating atimes</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const tabs=document.querySelectorAll('.tab_btn');
+        const all_content=document.querySelectorAll('.content');
+
+        tabs.forEach((tab, index)=>{
+            tab.addEventListener('click'(e)=>{
+               tabs.forEach(tab=>{tab.classList.remove('active')});
+                tab.classList.add('active');
+            })
+            var line=document.querySelector('.line');
+            line.style.width = e.target.offsetwidth + "%";
+            line.style.left = e.target.offsetleft + "rem";
+
+            all_content[index].classList.add('active');
+        })
+
+    </script>
+
+            <!-- <div class="w3-container">
+              <div class="w3-bar">
+                <button class="w3-bar-item-w3-button" onclick="openCity('London')">London</button>
+                <button class="w3-bar-item-w3-button" onclick="openCity('Paris')">Paris</button>
+              </div>
+              
+              <div id="London" class="w3-container city">
+                <h3 class="follow-heading">who to follow</h3>
+                <div class="follow-user">
+                    <div class="follow-user-img">
+                        <img src="couple4.png" />
+                    </div>
+                    <div class="follow-user-info">
+                        <h4>Anna Smith</h4>
+                        <p>@annasmith</p>
+                    </div>
+                    <button type="button" class="follow-btn">Follow</button>
+              </div>
+              
+              <div id="Paris" class="w3-container city" style="display: none;">
+                <h3 class="follow-heading">who to follow</h3>
+                <div class="follow-user">
+                    <div class="follow-user-img">
+                        <img src="image1.png" />
+                    </div> 
+              </div>
+              
+              <script>
+              function openCity(cityName) {
+                var i;
+                var x = document.getElementsByClassName("city");
+                for (i = 0; i < x.length; i++) {
+                  x[i].style.display = "none";  
+                }
+                document.getElementById(cityName).style.display = "block";
+              }
+              </script>
+               -->
+
+
+    <!-- <div class="feeds-content">
+        <div class="feeds-header">
+            <div class="header-top">
+                <h4>Home</h4>
+                <i class="far fa-star"></i>
+            </div>
+    
+            <div class="header-post"
+            <div class="header-img wrapper">
+                <img src="image1.png" alt="" />
+            </div>
+            <input type="text" placeholder="what is happening">
+            <i class="far fa-image"></i>
+            <i class="far fa-camera"></i>
+            <i class="far fa-chat-bar"></i>
+    </div>
+    <div class="posts">
+        <div class="post">
+            <div class= "user avatar">
+                <img src="lion2.png"/>
+            </div>
+            <div class="post-content">
+                <div class="post-user-info">
+                    <h4>Helen Browni</h4>
+                    <i class="fas fa-check-circle"></i>
+                    <span>@Helen Browni - 1hr 4m</span>
+                </div>
+                </div>
+                <p class="post-text">
+                    Prioritize safety at all times. Inform someone about your plans,
+                    especially if you're venturing into remote areas.
+                    Carry emergency essentials, such as a first aid kit and communication devices.
+                    Know your limits and respect the environment.
+                </p>
+                <div class="post-img"
+                <img src="cat3.png" alt="post"/>
+            </div>
+            <div class="post-icons">
+                <i class="far fa-comment"></i>
+                <i class="fas fa-retweet"></i>
+                <i class="far fa-heart"></i>
+                <i class="fas fa-share-alt"></i>
+            </div>
+        </div>
+    </div>
+    </div>
+    
+</div>
+<div class="search-bar">
+    <i class="fa-search"></i>
+    <input type="text" placeholder="search Twitter" class="search-bar-input"/>
+</div>
+<div class="follow">
+    <h3 class="follow-heading">who to follow</h3>
+    <div class="follow-user">
+        <div class="follow-user-img">
+            <img src="couple4.png" />
+        </div>
+        <div class="follow-user-info">
+            <h4>Anna Smith</h4>
+            <p>@annasmith</p>
+        </div>
+        <button type="button" class="follow-btn">Follow</button>
+    </div>
+    <div class="follow-user">
+        <div class="follow-user-img">
+            <img src="image5.jpg" />
+        </div>
+        <div class="follow-user-info">
+            <h4>Daisy Jim</h4>
+            <p>@daisy</p>
+            </div>
+            <button type="button" class="follow-btn">Follow</button>
+    </div>
+    <div class="follow-user">
+        <div class="follow-user-img">
+            <img src="image6.jpg" />
+        </div>
+        <div class="follow-user-info">
+            <h4>Aron Smith</h4>
+            <p>@aronsmith</p>
+        </div>
+        <button type="button" class="follow-btn">Follow</button>
+</div>
+<div class="follow-user">
+    <div class="follow-user-img">
+        <img src="image7.jpg" />
+    </div>
+    <div class="follow-user-info">
+        <h4>Silvie Finch</h4>
+        <p>@silviefinch</p>
+        </div>
+        </div>
+        <div class="follow-link">
+            <a href="#">show more</a>
+        </div>
+        <div><footer class="follow-footer">
+            <ul>
+                <li><a href="#">Terms of service</a></li>
+                <li><a href="#">privacy policy</a></li>
+                <li><a href="#">cookies policy</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">More</a></li>
+        </footer>
+    </ul></div>
+        </div>
+</div>
+<div class="w3-container">
+    <h2>Tabs</h2>
+    <p>Tabs are perfect for single page web applications, or for web pages capable of displaying different subjects. Click on the links below.</p>
+  </div>
+  
+  <div class="w3-bar w3-black">
+    <button class="w3-bar-item w3-button" onclick="openCity('London')">London</button>
+    <button class="w3-bar-item w3-button" onclick="openCity('Paris')">Paris</button>
+    <button class="w3-bar-item w3-button" onclick="openCity('Tokyo')">Tokyo</button>
+  </div>
+  
+  <div id="London" class="w3-container city">
+    <h2>London</h2>
+    <p>London is the capital city of England.</p>
+  </div>
+  
+  <div id="Paris" class="w3-container city" style="display:none">
+    <h2>Paris</h2>
+    <p>Paris is the capital of France.</p> 
+  </div>
+  
+  <div id="Tokyo" class="w3-container city" style="display:none">
+    <h2>Tokyo</h2>
+    <p>Tokyo is the capital of Japan.</p>
+  </div>
+  
+  <script>
+  function openCity(cityName) {
+    var i;
+    var x = document.getElementsByClassName("city");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";  
+    }
+    document.getElementById(cityName).style.display = "block";  
+  }
+  </script>
+  
+  </section>  
+</body>
+</html> -->
